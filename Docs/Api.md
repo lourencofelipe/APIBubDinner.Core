@@ -22,7 +22,7 @@ POST {{host}}/auth/register
 {
     "firstName":"Bruce",
     "lastName":" Iron",
-    "email":"bruce.iron@gmail.com",
+    "email":"bruce.iron@emailreq.com",
     "password":"Pass123"
 }
 ```
@@ -34,7 +34,7 @@ POST {{host}}/auth/register
 "id":"d89c2d9a-eb3e-4075095ff-b920b55aa105",
     "firstName":"Bruce",
     "lastName":" Iron",
-    "email":"bruce.iron@gmail.com",
+    "email":"bruce.iron@emailreq.com",
     "token":"e..hbbA"
 ```
 
@@ -46,7 +46,7 @@ POST {{host}}/auth/login
 #### Login Request
 ```json
 {
-    "email":"bruce.iron@gmail.com",
+    "email":"bruce.iron@emailreq.com",
     "password":"Pass123"
 }
 ```
@@ -56,7 +56,7 @@ POST {{host}}/auth/login
     "id":"d89c2d9a-eb3e-4075095ff-b920b55aa105",
     "firstName":"Bruce",
     "lastName":" Iron",
-    "email":"bruce.iron@gmail.com",
+    "email":"bruce.iron@emailreq.com",
     "token":"e..hbbA"
 }
 ```
