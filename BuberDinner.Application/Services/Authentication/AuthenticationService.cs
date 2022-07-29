@@ -14,7 +14,7 @@ public class AuthenticationService : IAuthenticationService
     {
         //check if user already exists
 
-        // Create uer (unique ID)
+        // Create user (unique ID)
 
         // Create Jwt token.
         Guid userId = Guid.NewGuid();

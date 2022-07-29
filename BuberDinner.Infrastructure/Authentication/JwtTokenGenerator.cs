@@ -12,9 +12,12 @@ namespace BuberDinner.Infrastructure.Authentication;
 public class JwtTokenGenerator : IJwtTokenGenerator
 {
     private readonly IDateTimeProvider _dateTimeProvider;
-    public JwtTokenGenerator(IDateTimeProvider dateTimeProvider)
+    private readonly JwtSettings _jwtSettings;
+
+    public JwtTokenGenerator(IDateTimeProvider dateTimeProvider, IOptions<JwtSettings> jwtOptions)
     {
         _dateTimeProvider = dateTimeProvider;
+        _jwtSettings = jwtOptions.Value;
     }
 
     public string GenerateToken(Guid userId, string firstName, string lastName)
