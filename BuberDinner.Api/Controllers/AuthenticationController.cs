@@ -2,6 +2,9 @@ using BuberDinner.Application.Services.Authentication;
 using BuberDinner.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
+using BuberDinner.Domain.Entities;
+
+
 namespace BuberDinner.Api.Controllers;
 
 [ApiController]
@@ -25,10 +28,10 @@ public class AuthenticationController : ControllerBase
             request.Password);
 
         var response = new AuthenticationResponse(
-            authResult.Id,
-            authResult.FirstName,
-            authResult.LastName,
-            authResult.Email,
+            authResult.user.Id,
+            authResult.user.FirstName,
+            authResult.user.LastName,
+            authResult.user.Email,
             authResult.Token
         );
 
@@ -43,10 +46,10 @@ public class AuthenticationController : ControllerBase
             request.Password);
 
         var response = new AuthenticationResponse(
-            authResult.Id,
-            authResult.FirstName,
-            authResult.LastName,
-            authResult.Email,
+            authResult.user.Id,
+            authResult.user.FirstName,
+            authResult.user.LastName,
+            authResult.user.Email,
             authResult.Token
         );
 
